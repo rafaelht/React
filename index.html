@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Números de la loto</h1>
+    <script>
+        let numeros = [];
+        const loto_max = Math.floor(Math.random() * 12) + 1;
+        const  super_max = Math.floor(Math.random() * 15) + 1;
+
+// Generar 6 números aleatorios
+for (let i = 0; i < 6; i++) {
+  let numero = Math.floor(Math.random() * 38) + 1;
+  numeros.push(numero);
+  numeros.sort((a, b) => a - b);
+}
+
+// Imprimir los números generados
+document.write("Los 6 numeros de la loto: ")
+document.write(numeros +"<br>")
+document.write("Loto max: ")
+document.write(loto_max + "<br>")
+document.write("Loto super max: ")
+document.write(super_max)
+
+
+
+
+
+    </script>
+
+<br>
+<br>
+<button onclick="location.reload()">Generar números</button>
+
+</body>
+</html>
